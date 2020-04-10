@@ -1,1 +1,1 @@
-
+javascript:(function(){const iTextNodes=document.createNodeIterator(document.body,NodeFilter.SHOW_TEXT);let tNode;while(tNode=iTextNodes.nextNode()){let text=tNode.textContent;const dot=/([\p{Script=Katakana}\p{Script=Hiragana}\p{Script=Han}])[．.]\s?/gu;text=text.replace(dot, "$1。");const comma=/([\p{Script=Katakana}\p{Script=Hiragana}\p{Script=Han}])[，,]\s?/gu;text=text.replace(comma,"$1、");console.log(text);tNode.textContent=text;}})()
